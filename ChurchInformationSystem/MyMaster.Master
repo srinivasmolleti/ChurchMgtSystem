@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MyMaster.master.cs" Inherits="Srinivas_Project.MyMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>AMAR MASJID</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Addons Styles -->
+    <!-- <link rel="stylesheet" type="text/css" href="addons/datatables/css/jquery.dataTables.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/dataTables.responsive.css">
+    <link href="css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="addons/jasny-bootstrap/css/jasny-bootstrap.css">
+    <link href="addons/switch/css/bootstrap3/bootstrap-switch.css" rel="stylesheet">
+    <link href="addons/datetime/jquery.datetimepicker.css" rel="stylesheet">
+    <link href="fonts/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="addons/colorpicker/css/colorpicker.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/base/jquery-ui.css">
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+    <link href="css/checkbox.css" rel="stylesheet">
+    <script src="addons/ckeditor/ckeditor.js"></script>
+    <!-- Addons Styles -->
+    <!-- Custom styles -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/media.css" rel="stylesheet">
+    <!--[if lt IE 9]><script src="`js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="`js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     <div class="main-nav-container">
+        <div class="main-nav-inner">
+            <div class="side-menu-toggle">
+                <i class="glyphicon glyphicon-menu-hamburger"></i>
+            </div>
+            <div class="main-logo-container">
+               <img src="" />
+            </div>
+            <div style="margin-top: -56px;">
+            <ul class="main-nav-top">
+                <%--<li class="dropdown"><a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown"
+                    role="button" aria-haspopup="true" aria-expanded="false"> --%> 
+                    Welcome <asp:Label ID="lblname" runat="server" Text=""></asp:Label>
+                    <%--<span class="caret"></span></a>--%>
+                    <%--<ul class="dropdown-menu pull-right" aria-labelledby="drop2">
+                        <li><a href="#">My Profile</a></li>
+                        <li><a href="#">Account Settings</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="">Logout</a></li>
+                    </ul>--%>
+               <%-- </li>--%>
+            </ul>
+            </div>
+        </div>
+    </div>
+    <form id="form1" runat="server">
+    <div class="page-wraper">
+        <div class="main-sidebar">
+            <ul class="main-nav">
+                <li><a href="DashBoard.aspx"><i class="fa fa-tachometer"></i>Dashboard</a></li>
+                <li><a href="locations.aspx"><i class="fa fa-map-marker"></i>Locations</a></li>
+                <li><a href="ViewMasjid.aspx"><i class="fa fa-rebel"></i>Masjid</a></li>
+                <li><a href="ViewMasjidTimings.aspx"><i class="glyphicon glyphicon-tint"></i>Masjid Timings</a></li>
+                <li><a href="ViewEvents.aspx"><i class="fa fa-bell"></i>Events</a></li>                
+                <li><a href="Adds.aspx"><i class="fa fa-bell"></i>Banner Ads</a></li>       
+                <hr />
+                <li><a href="changepass.aspx"><i class="fa fa-map-marker"></i> Change Password </a></li>         
+                <li><a href="Login.aspx"><i class="glyphicon glyphicon-list-alt"></i>Logout</a></li>
+            </ul>
+        </div>
+        <div class="main-wraper">
+            <div class="container-fluid">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script type="text/javascript" src="js/ie10-viewport-bug-workaround.js"></script>
+    <!-- Addons Scripts -->
+    <script type="text/javascript" language="javascript" src="addons/datatables/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" language="javascript" src="addons/jasny-bootstrap/js/jasny-bootstrap.js"></script>
+    <script type="text/javascript" language="javascript" src="addons/switch/js/bootstrap-switch.js"></script>
+    <script type="text/javascript" language="javascript" src="addons/datetime/jquery.datetimepicker.js"></script>
+    <script type="text/javascript" language="javascript" src="js/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" language="javascript" src="js/jquery.nestable.js"></script>
+    <script type="text/javascript" language="javascript" src="js/dataTables.responsive.js"></script>
+    <script type="text/javascript" src="js/select2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="addons/colorpicker/js/colorpicker.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    </form>
+</body>
+</html>

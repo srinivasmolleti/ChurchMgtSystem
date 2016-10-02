@@ -1,0 +1,23 @@
+@media(max-width: 768px){
+	.main-wraper{
+	  margin-left: 0px;
+	  padding: 15px 5px;
+	  transition:0.5s all;
+	}
+
+	.page-wraper .main-sidebar{
+		left: -240px;		
+	}
+	.page-wraper.full-view .main-sidebar{
+	  left: 0px;
+	}
+	.page-wraper.full-view .main-wraper{
+	  margin-left: 0px;
+	}
+	.main-logo-container{
+		display: none;
+	}
+	.login-container{
+	  margin: 0px auto;
+	}
+}
